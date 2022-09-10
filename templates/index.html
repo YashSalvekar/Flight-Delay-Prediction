@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<html>
+<head>
+<title>Flight Delay Prediction</title>
+<style>
+body {
+  background-image: url("https://wallpaperset.com/w/full/c/7/c/249456.jpg");
+  background-size: cover;
+}
+h1 {
+	text-align: center;
+	}
+form {
+text-align :center;
+}
+input {
+width: 50%;
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  width: 10%
+}
+select {
+width: 50%;
+}
+
+label {
+  font-size: 20px;
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}​
+</style>
+<body>
+<h1>Flight delay prediction</h1>
+
+<form method="post" action = "/predict">
+
+
+<label for = "Month">Month</label>
+<select id="Month" name="Month>
+
+      <option value="1">1</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+
+</select>
+<br></br>
+
+<label for = "dnumber">Day</label>
+<input type = 'text' id = 'dnumber', name = 'Day', required = 'required', placeholder = 'Write your day of journey ...'
+<br></br>
+
+<label for = "dnumber">Flight Number</label>
+<input type = 'text' id = 'dnumber', name = 'FLIGHT_NUMBER', required = 'required', placeholder = 'Write your flight number  ...'
+<br></br>
+
+<label for = "dnumber">SCHEDULED_DEPARTURE,</label>
+<input type = 'text' id = 'dnumber', name = 'SCHEDULED_DEPARTURE', required = 'required', placeholder = 'Flight Schedule Departure Time (HHMM) ...'
+<br></br>
+
+<label for = "dnumber">DEPARTURE_TIME</label>
+<input type = 'text' id = 'dnumber', name = 'DEPARTURE_TIME', required = 'required', placeholder = 'Exact Departure Time [Ex. 2201 (HHMM)]...'
+<br></br>
+
+<label for = "dnumber">DEPARTURE_DELAY</label>
+<input type = 'text' id = 'dnumber', name = 'DEPARTURE_DELAY', required = 'required', placeholder = 'Enter Departure Delay (minutes) ...'
+<br></br>
+
+<label for = "dnumber">AIR_SYSTEM_DELAY</label>
+<input type = 'text' id = 'dnumber', name = 'AIR_SYSTEM_DELAY', required = 'required', placeholder = 'Air System Delay (0- NO, 1-YES) ...'
+<br></br>
+
+<label for = "dnumber">SECURITY_DELAY</label>
+<input type = 'text' id = 'dnumber', name = 'SECURITY_DELAY', required = 'required', placeholder = 'Security Delay (0- NO, 1-YES)...'
+<br></br>
+
+<label for = "dnumber">AIRLINE_DELAY,</label>
+<input type = 'text' id = 'dnumber', name = 'AIRLINE_DELAY', required = 'required', placeholder = 'Airline Delay (0- NO, 1-YES) ...'
+<br></br>
+
+
+<label for = "sdnumber">LATE_AIRCRAFT_DELAY</label>
+<input type = 'text' id = 'sdnumber', name = 'LATE_AIRCRAFT_DELAY', required = 'required', placeholder = 'Aircraft Delay (0- NO, 1-YES)...'
+<br></br>
+
+<label for = "denumber">WEATHER_DELAY</label>
+<input type = 'text' id = 'denumber', name = 'WEATHER_DELAY', required = 'required', placeholder = 'Weather Delay (0- NO, 1-YES) ...'
+
+<br></br>
+<label for = "denumber">DELAY</label>
+<input type = 'text' id = 'denumber', name = 'delay', required = 'required', placeholder = 'YES-1,NO-0 '
+
+<br></br>
+
+
+
+
+<label></label>
+<input id="submit" type="submit" value="Predict" />
+
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
